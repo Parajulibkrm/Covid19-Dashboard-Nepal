@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='http://bikramparajuli.com.np/favicon.ico' type='image/x-icon'/ >
+    <title>Corona Visualization Project</title>
+    <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <main>
+            <div class="header"> 
+                <h1>Covid-19 Nepal</h1>
+            </div>
+        <div class="boxes">
+            <div class="box1"> 
+                <h3>Total Cases</h3>
+                <div id="tc"></div>  
+            </div>
+            <div class="box2">         
+                <h3>Active Cases</h3>  
+                <div id="ta"></div>
+            </div>
+            <div class="box3">         
+                <h3>Total Recovered</h3>  
+                <div id="tr"></div>
+            </div>
+            <div class="box4">         
+                <h3>Total Deaths</h3> 
+                <div id="td"></div>
+            </div>
+            <div class="box5">         
+                <h3>Last Updated</h3> 
+                <div id="ld"></div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <col style="width:45%">
+	                <col style="width:30%">
+	                <col style="width:25%">
+                  <thead>
+                    <tr>
+                      <th>District</th>
+                      <th>Cases</th>
+                      <th>Active</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0" id="districtTable">
+                    <col style="width:50%">
+	                <col style="width:25%">
+	                <col style="width:25%">
+                  <tbody>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="controller"style="display: inline-block;">
+            <input type="range" class="slider" id="day-select" style="display: inline-block;">
+            <button id="playButton"style="display: inline-block;">Play</button>
+            <form>
+                <div class="radio-group" style="display: inline-block;">
+                    <input type="radio" id="option-one" name="selector" value="Cases" checked="checked">Cases </input> 
+                    <input type="radio" id="option-two" name="selector" value="Active">
+                    <label value="option-two">Active</label>
+                    <input type="radio" id="option-three" name="selector" value="recovered">
+                    <label value="option-three">recovered</label>
+                </div>
+            </form>
+        </div>
+        <div class="map"></div>
+        <div class="Nepal">
+            <canvas id="totalNepal" height="200px"></canvas>
+        </div>
+        <div class="Province">
+            <canvas id="totalProvince" height="200px"></canvas>
+        </div>
+        <div class="District">
+            <canvas id="totalDistrict" height="200px"></canvas>
+        </div>
+        <div class="lineContainer">
+            <div class="lineControl">
+                <!-- <div class="lineTitle"><h3>History of growth in Kathmandu</h3></div> -->
+                <div class="select">
+                    <span>Last</span>
+                <select name="slct" id="slct">
+                </select>
+                <span>Days</span>
+                </div>
+            </div>
+            <div class="line">
+                <canvas id="lineChart" height="200px"></canvas>
+            </div>
+        </div>
+        <!-- <div  class="graph">
+            <div class="graph-container">
+                <canvas id="lineChart"></canvas>
+            </div>
+      </div> -->
+
+        <div class="bar"></div>
+        <div class="footer">
+            <span style="display: inline-block;">
+                <h5 style="display: inline-block;">Data displayed on this website may not be accurate/up-to-date. Please refer to</h5>
+                <a href="https://covid19.mohp.gov.np/" target="_blank" rel="noopener noreferrer" style="display: inline-block;">this site</a>
+                <h5 style="display: inline-block;">for latest data.</h5>
+            </span>
+            <span style="display: inline-block;">
+                <h5 style="display: inline-block;">Made with </h5><strong style="display: inline-block; margin-left: 0.5em; margin-right: 0.5em;" > ❤ </strong><h5 style="display: inline-block;"> by </h5> <a href="https://facebook.com/Parajuli.Bkrm" target="_blank" rel="noopener noreferrer" style="display: inline-block;">Bikram Parajuli.</a>
+            </span>
+        </div>
+    </main>
+    <script src="static/js/map.js"></script>
+    <script src="static/js/colorbrewer.js"></script>
+    <!-- <script src="static/js/pie.js"></script> -->
+    <script src="static/js/wholeNepalPie.js"></script>
+    <script src="static/js/districtPie.js"></script>
+    <script src="static/js/provincialPie.js"></script>
+    <script src="static/js/lineGraph.js"></script>
+    <script src="static/js/controller.js"></script>
+</body>
+</html>
