@@ -2,7 +2,8 @@
 
 **Covid-19-Nepal** is a a data visualization dashboard for **Covid-19** pandemic in Nepal down to district level.  This is a **static** website written in vanilla javascript with no frameworks. However, D3.js is used for choropleth map and Chart.js is used for line graph and doughnut charts. 
 
-## Live demo [Here] (https://parajulibkrm.github.io/Covid-19-Nepal/) 
+## Live demo 
+[Here](https://parajulibkrm.github.io/Covid-19-Nepal/) 
 ## Dataset
 
 Since I couldn't find any opensource dataset classifying cases per district, I decided to give it a try myself. So I made the dataset myself based on data from various news sources. The dataset is available in csv format and is open-sourced on **Github!** [(Repo link)](https://github.com/Parajulibkrm/covid19-district-data-nepal)
