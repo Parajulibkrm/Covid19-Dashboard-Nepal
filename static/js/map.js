@@ -33,7 +33,7 @@ function getColor(data,option) {
     let dataMax = d3.max(data,d => d[option])
     let rangeIndex;
     if (dataMax < 8) {
-        rangeIndex = dataMax + 1;
+        rangeIndex = dataMax;
     } else {
         rangeIndex = 9;
     }
@@ -52,7 +52,7 @@ function getColor(data,option) {
     }
     return d3.scaleQuantize()
              .range(range)
-             .domain([0,d3.max(data, d => d[option])+1])
+             .domain([0,d3.max(data, d => d[option])])
 }
 function colorMap(dataOfDay,option) {
     // console.log(dataOfDay.filter(d => d.districtId == "71"))
