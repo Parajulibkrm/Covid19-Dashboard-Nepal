@@ -6,7 +6,7 @@
 [Here](https://parajulibkrm.github.io/Covid-19-Nepal/) 
 ## Dataset
 
-Since I couldn't find any opensource dataset classifying cases per district, I decided to give it a try myself. So I made the dataset myself based on data from various news sources. The dataset is available in csv format and is open-sourced on **Github!** [(Repo link)](https://github.com/Parajulibkrm/covid19-district-data-nepal)
+Since I couldn't find any open source dataset classifying cases per district, I decided to give it a try myself. So I made the dataset myself based on data from various news sources. The dataset is available in csv format and is open-sourced on **Github!** [(Repo link)](https://github.com/Parajulibkrm/covid19-district-data-nepal)
 
 > **Note:** The **Dataset** is completely managed by me so might not be upto-date. Use at your own discretion. 
 
@@ -28,7 +28,7 @@ Linegraph is visualization of data of linear change in Total  active cases, reco
 
 There are in total three doughnut charts for division of Total Reported Cases into Active Cases, Recovered and Deaths. 
 
-# Setting up
+## Setting up
 
 
 To set-up the project on your local machine:
@@ -37,7 +37,7 @@ To set-up the project on your local machine:
 
 - Use a simple ``http server`` or Vscode's ``live server extension`` to run the project locally. 
 
-# To-Do 
+## To-Do 
 - Fix responsiveness for various screen sizes.
 - Fix css for controller bar.
 - Generate choropleth map and graphs for local-levels. 
